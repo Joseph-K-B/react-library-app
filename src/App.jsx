@@ -6,29 +6,29 @@ import './App.css'
 function App() {
   // TODO: Add routes to books & views
   return (
-    <>
-      <header>
-        <h1>Library Catalog</h1>
-        <Router>
+    <section>
+      <Router>
+        <header>
+          <h1>Library Catalog</h1>
           <NavLink to="/" exact>
             Home
           </NavLink>
-          <NavLink to="/books">BookList</NavLink>
-        </Router>
-      </header>
-      <main className="container">
-        <Router>
+          <NavLink to="/books" exact>
+            Library
+          </NavLink>
+        </header>
+        <main className="container">
           <Switch>
             <Route exact path="/books" component={BookList} />
             <Route exact path="/books/:id" component={BookDetail} />
           </Switch>
-        </Router>
-        {/* <Route exact path="/" component={Home} /> */}
-      </main>
-      <footer>
-        <p>Footer</p>
-      </footer>
-    </>
+          {/* <Route exact path="/" component={Home} /> */}
+        </main>
+        <footer>
+          <p>Footer</p>
+        </footer>
+      </Router>
+    </section>
   )
 }
 
