@@ -21,7 +21,7 @@ function App() {
             </NavLink>
           </nav>
         </header>
-        <main className="container">
+        <main className="container" aria-label="main">
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/books" component={BookList} />
